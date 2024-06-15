@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:gravity="center"
+           android:orientation="vertical">
+
+           <ImageView
+               android:layout_width="100dp"
+               android:layout_height="80dp"
+               android:src="@drawable/shuddhi_logo"/>
+
+           <TextView
+               android:id="@+id/login_name"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Hello, Santosh Kumar!"
+               android:textStyle="bold"
+               android:textColor="#ffffff"
+               android:gravity="center"
+               android:textSize="16dp"/>
+
+           <TextView
+               android:id="@+id/date"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="mm/dd/yyyy"
+               android:textStyle="italic"
+               android:textColor="#ffffff"
+               android:gravity="center"
+               android:textSize="14dp"/>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="20dp"
+               android:orientation="horizontal">
+
+               <LinearLayout
+                   android:id="@+id/total_request_click"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/product_bg_round"
+                   android:padding="15dp"
+                   android:layout_weight="0.1"
+                   android:orientation="vertical"
+                   android:clickable="true"
+                   android:gravity="center">
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textSize="16dp"
+                       android:gravity="center"
+                       android:textColor="#70757a"
+                       android:text="Total Request"/>
+                   <TextView
+                       android:id="@+id/total_request_count"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textSize="26dp"
+                       android:gravity="center"
+                       android:textStyle="bold"
+                       android:textColor="#fa971c"
+                       android:text="0"/>
+               </LinearLayout>
+               <LinearLayout
+                   android:id="@+id/clinic_visited_click"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/product_bg_round"
+                   android:layout_marginLeft="5dp"
+                   android:layout_marginRight="5dp"
+                   android:padding="15dp"
+                   android:layout_weight="0.1"
+                   android:orientation="vertical"
+                   android:clickable="true"
+                   android:gravity="center">
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textSize="16dp"
+                       android:gravity="center"
+                       android:textColor="#70757a"
+                       android:text="Clinic Visited"/>
+                   <TextView
+                       android:id="@+id/clinic_visited_count"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textSize="26dp"
+                       android:gravity="center"
+                       android:textStyle="bold"
+                       android:textColor="#fa971c"
+                       android:text="0"/>
+               </LinearLayout>
+               <LinearLayout
+                   android:id="@+id/today_click"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/product_bg_round"
+                   android:padding="15dp"
+                   android:layout_weight="0.1"
+                   android:orientation="vertical"
+                   android:clickable="true"
+                   android:gravity="center">
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textSize="16dp"
+                       android:gravity="center"
+                       android:textColor="#70757a"
+                       android:text="Today Request"/>
+                   <TextView
+                       android:id="@+id/today_count"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textSize="26dp"
+                       android:gravity="center"
+                       android:textStyle="bold"
+                       android:textColor="#fa971c"
+                       android:text="0"/>
+               </LinearLayout>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="20dp"
+               android:orientation="horizontal">
+
+               <EditText
+                   android:id="@+id/searchInput"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="0.1"
+                   android:maxLines="1"
+                   android:inputType="number"
+                   android:hint="Search by mobile"
+                   android:background="@drawable/product_bg_round"
+                   android:padding="10dp"/>
+               
+               <ImageView
+                   android:id="@+id/searchBtn"
+                   android:layout_width="match_parent"
+                   android:layout_height="45dp"
+                   android:layout_weight="0.3"
+                   android:padding="10dp"
+                   android:background="@drawable/product_bg_round"
+                   android:src="@drawable/search_icon"/>
+
+           </LinearLayout>
+
+           <Button
+               android:id="@+id/add_new_request"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginRight="20dp"
+               android:layout_marginLeft="20dp"
+               android:layout_marginTop="50dp"
+               android:layout_marginBottom="50dp"
+               android:textSize="18dp"
+               android:textStyle="bold"
+               android:background="@drawable/round_bg_orange"
+               android:text="Add New Request"/>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="20dp"
+               android:orientation="horizontal">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_weight="0.1">
+
+                   <LinearLayout
+                       android:id="@+id/start_div"
+                       android:visibility="gone"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="Start"
+                       android:textColor="#fff"
+                       android:textSize="11dp"/>
+                   <TextView
+                       android:id="@+id/start_time"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="00:00"
+                       android:textStyle="bold"
+                       android:textColor="#fff"
+                       android:textSize="18dp"/>
+                   </LinearLayout>
+                   <Button
+                       android:id="@+id/shift_start"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="Shift Start"
+                       android:textStyle="bold"
+                       android:textSize="12dp"
+                       android:background="@drawable/round_bg_orange"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_weight="0.1">
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_weight="0.1">
+                   <LinearLayout
+                       android:id="@+id/end_div"
+                       android:visibility="gone"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:text="End"
+                           android:textColor="#fff"
+                           android:textSize="11dp"/>
+                       <TextView
+                           android:id="@+id/end_time"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:text="00:00"
+                           android:textStyle="bold"
+                           android:textColor="#fff"
+                           android:textSize="18dp"/>
+                   </LinearLayout>
+                   <Button
+                       android:id="@+id/shift_end"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="Shift End"
+                       android:textStyle="bold"
+                       android:textSize="12dp"
+                       android:background="@drawable/round_bg_orange"/>
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_marginTop="20dp"
+               android:gravity="center">
+               <ImageView
+                   android:id="@+id/logout"
+                   android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   android:clickable="true"
+                   android:src="@drawable/logout_icon"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="11dp"
+                   android:textColor="#E3E3E3"
+                   android:text="Logout"/>
+           </LinearLayout>
+
+       </LinearLayout>
+
+   </ScrollView>
+
+</LinearLayout>
